@@ -1,11 +1,12 @@
 import { BrowserRouter , Routes , Route } from 'react-router'
 import Home from './Pages/Home/Home'
+import Feed from './Pages/Feed/Feed'
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}>
-          <Route index element={`<Home/>`}/>
+          <Route index element={<Feed/>}/>
           <Route path="categories" element='This is categories'/>
           <Route path="cart" element='This is cart'/>
           <Route path="profile" element='This is profile'/>

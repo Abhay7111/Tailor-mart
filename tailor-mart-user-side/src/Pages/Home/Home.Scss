@@ -1,13 +1,16 @@
 .main-home{
     width: 100vw;
     height: 100vh;
-    background-color: red;
     position: relative;
+    overflow: hidden;
     nav{
         position: absolute;
         width: 100%;
         left: 0;
         padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -20,9 +23,10 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 535px) {
   .main-home {
-background-color: wheat;
+    background-color: wheat;
+    
     nav{
         bottom: 0%;
     }

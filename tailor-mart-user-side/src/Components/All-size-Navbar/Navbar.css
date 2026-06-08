@@ -1,0 +1,43 @@
+.all-size-navbar-main {
+  width: 100%;
+  height: 60px;
+  padding: 0 10px;
+}
+
+@media (max-width: 535px) {
+  .all-size-navbar-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .all-size-navbar-main .logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .all-size-navbar-main .links .menu {
+    font-size: 1.4rem;
+    font-weight: 200;
+    cursor: pointer;
+  }
+  .all-size-navbar-main .menu-pop {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    overflow-y: scroll;
+  }
+  .all-size-navbar-main .menu-pop .menu-pop-close-btn {
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+  }
+  .all-size-navbar-main .menu-pop .menu-pop-close-btn i {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=Navbar.css.map */
