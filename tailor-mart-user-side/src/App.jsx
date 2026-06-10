@@ -6,7 +6,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}>
-          <Route index element={<Feed/>}/>
+          <Route path='/' element={<Feed/>}>
+            <Route index element='Hello feed'/>
+            <Route path='*' element='404'/>
+          </Route>
           <Route path="categories" element='This is categories'/>
           <Route path="cart" element='This is cart'/>
           <Route path="profile" element='This is profile'/>

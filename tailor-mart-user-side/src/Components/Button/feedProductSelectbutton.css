@@ -1,0 +1,51 @@
+@media (Max-width: 535px) {
+  .feed-product-selectbutton {
+    min-width: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  .feed-product-selectbutton .feed-product-buttons {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 35px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    border-radius: 10px;
+  }
+  .feed-product-selectbutton .feed-product-buttons i {
+    width: 1.2rem;
+    height: 1.2rem;
+    opacity: 80%;
+  }
+  .feed-product-selectbutton .feed-product-buttons p {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .feed-product-selectbutton .active {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    stroke: white;
+    stroke-width: 12px;
+    fill: white;
+  }
+  .feed-product-selectbutton .active:hover {
+    opacity: 90%;
+  }
+  .feed-product-selectbutton .deactive {
+    background-color: rgba(235, 235, 235, 0.685);
+    color: rgb(87, 87, 87);
+    stroke: rgb(87, 87, 87);
+  }
+  .feed-product-selectbutton .deactive:hover {
+    background-color: rgba(226, 226, 226, 0.7);
+  }
+}/*# sourceMappingURL=feedProductSelectbutton.css.map */

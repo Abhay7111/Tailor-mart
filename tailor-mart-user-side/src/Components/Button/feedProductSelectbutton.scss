@@ -1,0 +1,54 @@
+@media (Max-width : 535px) {
+    .feed-product-selectbutton{
+        min-width: 100%;
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 15px;
+        padding: 0 10px;
+
+        .feed-product-buttons{
+            width: fit-content;
+            height: 35px;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            border-radius: 10px;
+
+            i{
+                width: 1.2rem;
+                height: 1.2rem;
+                opacity: 80%;
+            }
+            p{
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+        }
+        
+        .active{
+            background-color: rgb(37, 37, 37);
+            color: white;
+            stroke: white;
+            stroke-width: 12px;
+            fill: white;
+
+            &:hover{
+                opacity: 90%;
+            }
+        }
+        .deactive{
+            background-color: rgba(235, 235, 235, 0.685);
+            color: rgb(87, 87, 87);
+            stroke: rgb(87, 87, 87);
+            
+            &:hover{
+                background-color: rgba(226, 226, 226, 0.7);
+            }
+        }
+    }
+}

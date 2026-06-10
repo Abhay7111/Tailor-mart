@@ -48,19 +48,9 @@
     overflow: hidden;
     cursor: pointer;
   }
-  .feed-main .feed-cont-wrap {
+  .feed-main .feed-categories {
     width: 100%;
-    height: 20vh;
-    background-color: whitesmoke;
-    padding: 4px;
-    display: flex;
-    gap: 4px;
+    height: 5vh;
     overflow-x: auto;
-    overflow-y: hidden;
-  }
-  .feed-main .feed-cont-wrap .feed-const-random {
-    width: 165px;
-    height: 100%;
-    background-color: antiquewhite;
   }
 }/*# sourceMappingURL=Feed.css.map */
