@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 .main-home nav {
   position: fixed;
@@ -11,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99;
 }
 
 @media (min-width: 750px) {
@@ -20,7 +22,7 @@
 }
 @media (max-width: 535px) {
   .main-home {
-    background-color: #EAE0CF;
+    background-color: #fbfbfb;
   }
   .main-home nav {
     bottom: 0%;

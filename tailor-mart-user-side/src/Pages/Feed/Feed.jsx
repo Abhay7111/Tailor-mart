@@ -1,18 +1,16 @@
 import Navbar from "../../Components/All-size-Navbar/Navbar"
-import './Feed.css'
+import Popular_random from "../../Components/RandomProducts/Popular.random"
+
+
 function Feed() {
+
   return (
     <div className="feed-main">
-      <div>
+      <div className="feed-top-navbar">
         <Navbar/>
       </div>
-      <div className="feed-cont">
-        <div className="h-96 bg-red-400">uii</div>
-        <div className="h-96 bg-red-400">uii</div>
-        <div className="h-96 bg-red-400">uii</div>
-        <div className="h-96 bg-red-400">uii</div>
-        <div className="h-96 bg-red-400">uii</div>
-      </div>
+      <div className="feed-search-bar"></div>
+        <Popular_random/>
     </div>
   )
 }

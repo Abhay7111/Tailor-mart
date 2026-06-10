@@ -1,6 +1,70 @@
-.feed-main{
-    width: 100%;
-    height: 100vh;
-    .feed-cont{
+@media (max-width: 535px) {
+    .feed-main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        .feed-popular-cont{
+            width: 100%;
+            padding: 0 10px;
+            overflow: hidden;
+            background-color: #e3fde3;
+            border-radius: 30px;
+            padding: 2px;
+            
+            .feed-popular-wrap{
+                width: 100%;
+                height: 35vh;
+    
+                .feed-popular-inner{
+                    width: fit-content;
+                    min-width: 100%;
+                    height: 100%;
+                    background-color: white;
+                    border-radius: 26px;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    justify-content: start;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        background-color: white;
+                        object-fit: cover;
+                    }
+                    .feed-popular-cont{
+                        min-width: 100%;
+                        height: 100%;
+                        background-color: white;
+                        border-radius: 28px;
+                        padding: 0;
+                        overflow: hidden;
+                        cursor: pointer;
+    
+                    }
+                }
+            }
+        }
+    
+        .feed-cont-wrap{
+            width: 100%;
+            height: 20vh;
+            background-color: whitesmoke;
+            padding: 4px;
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            overflow-y: hidden;
+    
+            .feed-const-random{
+                width: 165px;
+                height: 100%;
+                background-color: antiquewhite;
+            }
+        }
     }
 }
