@@ -1,0 +1,12 @@
+.commonStyle-flex-col-start {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.commonStyle-h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Poppins";
+}/*# sourceMappingURL=commonStyle.css.map */
