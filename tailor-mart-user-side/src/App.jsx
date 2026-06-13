@@ -1,21 +1,22 @@
-import { BrowserRouter , Routes , Route } from 'react-router'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Feed from './Pages/Feed/Feed'
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}>
-          <Route path='/' element={<Feed/>}>
-            <Route index element='Hello feed'/>
-            <Route path='*' element='404'/>
+        <Route path="/" element={<Home />}>
+            <Route index element="hello"/>
+          <Route path='feed' element={<Feed />}>
+            <Route path='/feed/:id' element={<div></div>}/>
           </Route>
-          <Route path="categories" element='This is categories'/>
-          <Route path="cart" element='This is cart'/>
-          <Route path="profile" element='This is profile'/>
-          <Route path="*" element='404'/>
+          <Route path="categories" element={<div>This is categories</div>} />
+          <Route path="cart" element={<div>This is cart</div>} />
+          <Route path="profile" element={<div>This is profile</div>} />
+          <Route path="about" element={<div>hello about</div>} />
+          <Route path="*" element={<div>404</div>} />
         </Route>
-        <Route path="about" element='hello about'/>
       </Routes>
     </BrowserRouter>
   )

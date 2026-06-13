@@ -3,9 +3,13 @@ import Navbar from "../../Components/All-size-Navbar/Navbar";
 import Popular_random from "../../Components/RandomProducts/Popular.random";
 import SearchProduct from "../../Components/Search/searchProduct";
 import FeedProductSelectbutton from '../../Components/Button/feedProductSelectbutton';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
+import { useProductData } from '../../Services/products.services';
 
 function Feed() {
+  const { id } = useParams();
+  const { data, loading, error } = useProductData();
+  const itemCount = Array.isArray(data) ? data.length : 0;
 
   return (
     <div className="feed-main">
@@ -23,7 +27,16 @@ function Feed() {
         <FeedProductSelectbutton />
       </div>
       <div>
-        <Outlet/>
+        this is `{id}` page--
+        {loading ? 'Loading...' : error ? `Error: ${error.message}` : `${itemCount} items loaded`}
+        {!loading && !error && data.length > 0 && (
+          <div>
+            {data.map((user) => (
+              <div key={user._id}>{user.username}</div>
+            ))}
+          </div>
+        )}
+        <Outlet />
       </div>
     </div>
   )
