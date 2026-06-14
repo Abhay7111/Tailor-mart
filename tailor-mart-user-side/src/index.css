@@ -16,3 +16,7 @@ html, body{
 ::-webkit-scrollbar{
     display: none;
 }
+
+.blank-erea{
+    height: 50px;
+}

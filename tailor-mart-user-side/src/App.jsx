@@ -1,6 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Pages/Home/Home'
-import Feed from './Pages/Feed/Feed'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import Feed from './Pages/Feed/Feed';
+import AllCloth from './Components/allTexturedCloths/allCloth';
+import MenTShirt from './Components/AllCategoryeProduct/menTShirt/menTshirt';
+import WomenDress from './Components/AllCategoryeProduct/omenDress/omenDress';
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
         <Route path="/" element={<Home />}>
             <Route index element="hello"/>
           <Route path='feed' element={<Feed />}>
-            <Route path='/feed/:id' element={<div></div>}/>
+            <Route path='/feed/all' element={<AllCloth/>}/>
+            <Route path='/feed/men-t-shirt' element={<MenTShirt/>}/>
+            <Route path='/feed/women-dress' element={<WomenDress/>}/>
+            <Route path='/feed/:id' element={<div>all</div>}/>
           </Route>
           <Route path="categories" element={<div>This is categories</div>} />
           <Route path="cart" element={<div>This is cart</div>} />

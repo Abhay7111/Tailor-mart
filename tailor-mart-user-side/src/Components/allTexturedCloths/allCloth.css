@@ -1,0 +1,49 @@
+@media (max-width: 535px) {
+  .allCloth-main {
+    width: 100%;
+  }
+  .allCloth-main .allCloth-cont-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  .allCloth-main .allCloth-cont-main .allCloth-cont {
+    width: 100%;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    background-color: rgba(243, 243, 243, 0.836);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    transition: all ease 0.2s;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .allCloth-main .allCloth-cont-main .allCloth-cont:hover {
+    background-color: rgba(236, 236, 236, 0.918);
+    scale: 1.01;
+    border: 1px solid rgba(202, 202, 202, 0.911);
+  }
+  .allCloth-main .allCloth-cont-main .allCloth-cont img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5px;
+  }
+  .allCloth-main .allCloth-cont-main .allCloth-cont h2 {
+    margin-top: 2px;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 0.9rem;
+    font-weight: 500;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}/*# sourceMappingURL=allCloth.css.map */
