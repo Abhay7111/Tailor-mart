@@ -35,15 +35,39 @@
                     border-radius: 5px;
                 }
 
-                h2{
-                    margin-top: 2px;
-                    height: fit-content;
-                    font-size: 0.9rem;
-                    font-weight: 500;
-                    overflow: hidden;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2;
+                .allCloth-details{
+                    width: 100%;
+
+                    h2{
+                        width: 100%;
+                        text-align: start;
+                        margin-top: 2px;
+                        height: fit-content;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-height: 18px;
+                    }
+
+                    .allCloth-price{
+                        width: 100%;
+                        display: flex;
+                        align-items: end;
+                        justify-content: end;
+                        gap: 5px;
+                        font-weight: 600;
+
+                        p:nth-child(1){
+                            font-size: 0.8rem;
+                            font-weight: 400;
+                            text-decoration-line: line-through;
+                            opacity: 50%;
+                            margin: 5px 0;
+                        }
+                    }
                 }
             }
         }

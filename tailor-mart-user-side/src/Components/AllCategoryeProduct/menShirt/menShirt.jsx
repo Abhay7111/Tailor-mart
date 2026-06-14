@@ -1,6 +1,6 @@
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useProductData } from "../../../Services/products.services"
-import { useEffect, useRef, useState } from "react";
 
 const PLACEHOLDER_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
@@ -44,16 +44,18 @@ function LazyImage({ src, alt }) {
     );
 }
 
-function omenDress() {
+
+function menShirt() {
 
     const { data, loading, error } = useProductData();
+
   return (
     <div className='allCloth-main'>
                 {loading && <div>loading...</div>}
                 {error && <div>There is problem to fetch the data...</div>}
     
                 <div className='allCloth-cont-main'>
-                    {!loading && !error && data.filter(item => item.productTag?.cloth === 'women-dress').map((items, index) => (
+                    {!loading && !error && data.filter(item => item.productTag?.cloth === 'men-shirt').map((items, index) => (
                         <NavLink key={index} className='allCloth-cont'>
                             <LazyImage src={items.productImage} alt={items.productName} />
                             <div className='allCloth-details'>
@@ -70,4 +72,4 @@ function omenDress() {
   )
 }
 
-export default omenDress
+export default menShirt
