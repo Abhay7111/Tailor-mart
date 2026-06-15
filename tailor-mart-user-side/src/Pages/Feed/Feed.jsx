@@ -3,13 +3,9 @@ import Navbar from "../../Components/All-size-Navbar/Navbar";
 import Popular_random from "../../Components/RandomProducts/Popular.random";
 import SearchProduct from "../../Components/Search/searchProduct";
 import FeedProductSelectbutton from '../../Components/Button/feedProductSelectbutton';
-import { Outlet, useParams } from 'react-router-dom';
-import { useProductData } from '../../Services/products.services';
+import { Outlet } from 'react-router-dom';
 
 function Feed() {
-  const { id } = useParams();
-  const { data, loading, error } = useProductData();
-
   return (
     <div className="feed-main">
       <div className="feed-top-navbar">

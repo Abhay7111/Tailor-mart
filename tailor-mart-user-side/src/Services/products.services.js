@@ -27,10 +27,11 @@ export const TEST_PRODUCT_DATA = [
     {
         productImage: "https://plus.unsplash.com/premium_photo-1772492086300-83aaaa09eda9?q=80&w=626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         productTitle: "A smooth (#7D5331) texture",
-        productName: "smooth cloth",
+        productName: "yellow cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "498",
+        productColor: 'yellow',
         productTag: {
             cloth: "smooth cloth"
         }
@@ -40,8 +41,9 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (Brown) texture tshirts",
         productName: "smooth Brown cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "583",
+        productColor:'Brown',
         productTag: {
             cloth: "men-t-shirt"
         }
@@ -51,7 +53,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth texture (kahi) dress",
         productName: "smooth kahi dress",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasds df s fd hsd sghd sf dg gasdsd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "2199",
         productTag: {
             cloth: "women-dress"
@@ -62,7 +64,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (red) texture",
         productName: "smooth red cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasds df s fd hsd sghd sf dg gasdsd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "978",
         productTag: {
             cloth: "smooth red cloth"
@@ -73,7 +75,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (Golden) texture",
         productName: "smooth golden cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "1599",
         productTag: {
             cloth: "smooth golden cloth"
@@ -84,7 +86,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "Sooti multi color Shirts",
         productName: "Sooti multi color Shirts",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "883",
         productTag: {
             cloth: "men-shirt"
@@ -95,7 +97,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "Multi color T-shirts custom based",
         productName: "Multi color T-shirts custom based",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "533",
         productTag: {
             cloth: "men-t-shirt"
@@ -106,7 +108,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (Red) smooth T-shirt",
         productName: "smooth Red smooth T-shirt",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "583",
         productTag: {
             cloth: "men-t-shirt"
@@ -117,7 +119,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (kahi) texture",
         productName: "smooth kahi cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "882",
         productTag: {
             cloth: "smooth kahi cloth"
@@ -128,7 +130,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (glossy white) texture",
         productName: "smooth glossy white cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "2023",
         productTag: {
             cloth: "smooth glossy white cloth"
@@ -139,7 +141,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A royal blue dress",
         productName: "A royal blue dress",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "7899",
         productTag: {
             cloth: "women-dress"
@@ -150,7 +152,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (glossy sky blue) texture",
         productName: "smooth glossy sky blue cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "2134",
         productTag: {
             cloth: "smooth glossy sky blue cloth"
@@ -161,7 +163,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A culture saree",
         productName: "A culture saree",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "3899",
         productTag: {
             cloth: "women-saree"
@@ -172,7 +174,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "Office based custom shirts",
         productName: "Office based custom shirts",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "683",
         productTag: {
             cloth: "men-shirt"
@@ -183,7 +185,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (Black) texture tshirts",
         productName: "smooth Black Tshirt",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "583",
         productTag: {
             cloth: "men-t-shirt"
@@ -194,7 +196,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "Saree",
         productName: "Saree",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "1674",
         productTag: {
             cloth: "women-saree"
@@ -205,7 +207,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (glossy textured maroon) texture",
         productName: "smooth glossy textured maroon cloth",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "1674",
         productTag: {
             cloth: "smooth glossy textured maroon cloth"
@@ -216,7 +218,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "sooti shirts custom based",
         productName: "sooti shirts custom based",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "478",
         productTag: {
             cloth: "men-shirt"
@@ -227,7 +229,7 @@ export const TEST_PRODUCT_DATA = [
         productTitle: "A smooth (gray) texture T-shirt",
         productName: "smooth gray T-shirt",
         productLonchDate: "06/14/2026",
-        productDescription: "ghjgasd sghd hjasgdg shkgdasg dhkasgdgh sajdgjksdhjkfgkg gsdg jsdgkgf sdgdfg jdsgfjhsdgfjsdgh hsdgf ksdfd fgsj dhgfsd fsd g dfghy hhgh fh ghg fgh fg.",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "583",
         productTag: {
             cloth: "men-t-shirt"

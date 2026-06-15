@@ -1,0 +1,117 @@
+@media (max-width: 535px) {
+    .productDetails-main{
+        width: 100%;
+        padding: 0 10px;
+
+        .productDetails-wraper{
+            width: 100%;
+            height: fit-content;
+
+            .productDetails-cont{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                gap: 15px;
+
+                .productDetails-image-wraper{
+                    width: 100%;
+                    height: 400px;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #eee;
+                    padding: 3px;
+                    border-radius: 10px;
+
+                    img{
+                        width: fit-content;
+                        height: 100%;
+                        border-radius: 7px;
+                    }
+                }
+
+                .productDetails-color-tag-info{
+                    width: 100%;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    gap: 5px;
+                    opacity: 70%;
+
+                    p{
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    
+                        span{
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+
+                .productDetails-title-wraper{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
+                    gap: 15px;
+
+                    h2{
+                        font-size: 1rem;
+                        font-weight: 600;
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    p{
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                    }
+                }
+
+                .productDetails-price-wraper{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .productDetails-discount-price{
+                        font-size: 0.8rem;
+                        text-decoration-line: line-through;
+                        opacity: 50%;
+                    }
+
+                    .productDetails-price{
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+
+                .productDetails-offers{
+                    width: 100%;
+                    height: 200px;
+                    background-color: rgb(235, 235, 235);
+                    padding: 15px;
+                    border-radius: 15px;
+
+                    p{
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

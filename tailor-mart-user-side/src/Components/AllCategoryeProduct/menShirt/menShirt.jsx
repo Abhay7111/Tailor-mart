@@ -56,7 +56,7 @@ function menShirt() {
     
                 <div className='allCloth-cont-main'>
                     {!loading && !error && data.filter(item => item.productTag?.cloth === 'men-shirt').map((items, index) => (
-                        <NavLink key={index} className='allCloth-cont'>
+                        <NavLink to={`/product/${items.productName}`} key={index} className='allCloth-cont'>
                             <LazyImage src={items.productImage} alt={items.productName} />
                             <div className='allCloth-details'>
                                 <div className='allCloth-price'>

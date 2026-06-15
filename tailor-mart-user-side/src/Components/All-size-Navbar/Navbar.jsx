@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Navbar.css'
+import { NavLink } from 'react-router-dom';
 function Navbar() {
     let [openPop, setOpenPop] = useState(false);
   return (
@@ -11,7 +12,7 @@ function Navbar() {
 
       {openPop && <div className='menu-pop'>
         <div className='menu-pop-close-btn'><i onClick={() => setOpenPop(false)} className="ri-close-line"></i></div>
-        <div>sd</div>
+        <NavLink to={`/login`}>Login</NavLink>
       </div>}
     </div>
   )

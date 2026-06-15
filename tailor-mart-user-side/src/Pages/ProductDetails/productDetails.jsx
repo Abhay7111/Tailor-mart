@@ -1,0 +1,41 @@
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import Navbar from '../../Components/All-size-Navbar/Navbar';
+import { useProductData } from '../../Services/products.services';
+import './productDetails.css'
+function productDetails() {
+const {data, loading, error} = useProductData();
+const {id} = useParams();
+  return (
+    <div className='productDetails-main'>
+            <Navbar/>
+            {loading && 'Loading...'}
+            {error && error}
+        <div className='productDetails-wraper'>
+            {!loading && !error && data.filter(item => item.productName === id).map((items, index) => (
+                <div key={index} className='productDetails-cont'>
+                    <div className='productDetails-image-wraper'>
+                        <img src={items.productImage} alt={items.productName}/>
+                    </div>
+                    {items.productColor &&<div className='productDetails-color-tag-info'>
+                        <p><span>Selected Color:</span> {items.productColor}</p>
+                    </div>}
+                    <div className='productDetails-title-wraper'>
+                        <h2 className=''>{items.productTitle}</h2>
+                        <p className=''>{items.productDescription}</p>
+                    </div>
+                    <div className='productDetails-price-wraper'>
+                            <p className='productDetails-discount-price'>₹{Math.floor(items.productPrice*1.2)}</p>
+                            <p className='productDetails-price'>₹{items.productPrice}</p>
+                    </div>
+                    {items.productoffers && <div className='productDetails-offers'>
+                        <p>offers</p>
+                    </div>}
+                </div>
+            ))}
+        </div>
+    </div>
+  )
+}
+
+export default productDetails

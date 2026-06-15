@@ -55,7 +55,7 @@ function allCloth() {
 
             <div className='allCloth-cont-main'>
                 {!loading && !error && data.map((items, index) => (
-                    <NavLink to={`/feed/${items.productName}`} key={index} className='allCloth-cont'>
+                    <NavLink to={`/product/${items.productName}`} key={index} className='allCloth-cont'>
                         <LazyImage src={items.productImage} alt={items.productName} />
                         <div className='allCloth-details'>
                             <div className='allCloth-price'>
