@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProductData } from '../../Services/products.services';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import './allCloth.css'
 
 const PLACEHOLDER_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
@@ -12,6 +12,7 @@ function LazyImage({ src, alt }) {
     useEffect(() => {
         if (!ref.current) return;
         const element = ref.current;
+        let timeoutId;
 
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver(
@@ -31,7 +32,8 @@ function LazyImage({ src, alt }) {
             return () => observer.disconnect();
         }
 
-        setVisible(true);
+        timeoutId = window.setTimeout(() => setVisible(true), 0);
+        return () => window.clearTimeout(timeoutId);
     }, []);
 
     return (
@@ -45,8 +47,15 @@ function LazyImage({ src, alt }) {
     );
 }
 
-function allCloth() {
+function AllCloth() {
     const { data, loading, error } = useProductData();
+    const { id } = useParams();
+    const categoryId = String(id || 'all').toLowerCase();
+
+    const filteredProducts = data.filter((item) => {
+        const productCategory = String(item?.productTag?.cloth || '').toLowerCase();
+        return categoryId === 'all' || productCategory === categoryId;
+    });
 
     return (
         <div className='allCloth-main'>
@@ -54,12 +63,16 @@ function allCloth() {
             {error && <div>There is problem to fetch the data...</div>}
 
             <div className='allCloth-cont-main'>
-                {!loading && !error && data.map((items, index) => (
+                {!loading && !error && filteredProducts.length === 0 && (
+                    <div className='allCloth-empty'>No products found for “{id || 'all'}”.</div>
+                )}
+
+                {!loading && !error && filteredProducts.map((items, index) => (
                     <NavLink to={`/product/${items.productName}`} key={index} className='allCloth-cont'>
                         <LazyImage src={items.productImage} alt={items.productName} />
                         <div className='allCloth-details'>
                             <div className='allCloth-price'>
-                                <p>₹{Math.floor(items.productPrice*1.2)}</p>
+                                <p>₹{Math.floor(items.productPrice * 1.2)}</p>
                                 <p>₹{items.productPrice}</p>
                             </div>
                             <h2>{items.productName}</h2>
@@ -68,7 +81,7 @@ function allCloth() {
                 ))}
             </div>
         </div>
-    )
+    );
 }
 
-export default allCloth
+export default AllCloth

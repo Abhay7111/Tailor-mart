@@ -5,79 +5,31 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import '../../Pages/Feed/Feed.css'
+import { useProductData } from "../../Services/products.services";
+import { NavLink } from "react-router-dom";
 
 function Popular_random() {
-     let arrPopular = [
-    {
-      productName:'red',
-      productImage: 'https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb258ZW58MHx8MHx8fDA%3D',
-      productPopular: true,
-      productViews: 454,
-    },
-    {
-      productName:'smokey white',
-      productImage: 'https://images.unsplash.com/photo-1571513800374-df1bbe650e56?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZhc2hpb258ZW58MHx8MHx8fDA%3D',
-      productPopular: true,
-      productViews: 554,
-    },
-    {
-      productName:'Brown',
-      productImage: 'https://images.unsplash.com/photo-1608748010899-18f300247112?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D',
-      productPopular: true,
-      productViews: 424,
-    },
-    {
-      productName:'Black',
-      productImage: 'https://images.unsplash.com/photo-1612731486606-2614b4d74921?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGZhc2hpb258ZW58MHx8MHx8fDA%3D',
-      productPopular: true,
-      productViews: 624,
-    },
-    {
-      productName:'white',
-      productImage: 'https://images.unsplash.com/photo-1566206091558-7f218b696731?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGZhc2hpb258ZW58MHx8MHx8fDA%3D',
-      productPopular: true,
-      productViews: 424,
-    },
-    {
-      productName:'Red Last',
-      productImage: 'https://plus.unsplash.com/premium_photo-1708110921381-5da0d7eb2e0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUzfHxmYXNoaW9ufGVufDB8fDB8fHww',
-      productPopular: true,
-      productViews: 401,
-    },
-    {
-      productName:'white',
-      productImage: 'https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZhc2hpb258ZW58MHx8MHx8fDA%3D',
-      productPopular: true,
-      productViews: 401,
-    },
-    {
-      productName:'multi',
-      productImage: 'https://plus.unsplash.com/premium_photo-1778901739863-7764fdca5848?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D',
-      productPopular: true,
-      productViews: 401,
-    },
-  ]
+  const { data, loading, error } = useProductData();
 
-  
   useEffect(() => {
-    const swiper = new Swiper('.swiper', {
+    if (data.length > 0) {
+      new Swiper('.swiper', {
       modules: [Navigation, Pagination],
       slidesPerView: 'auto',
       spaceBetween: 5,
       pagination: { el: '.swiper-pagination', clickable: true },
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
     });
-
-    
-  }, []);
+    }
+  }, [data]);
   
   let feedPopular = (items) => (
-    <div className="swiper-slide">
+    <NavLink to={`/product/${items.productName}`} className="swiper-slide">
         <img src={items.productImage} alt="" />
-      </div>
+      </NavLink>
   )
   const CACHE_KEY = 'random';
-  const CACHE_TTL = 60 * 1000; // every 60 seconds
+  const CACHE_TTL = 5000; // 5 seconds in milliseconds
 
   const getCachedRandom = () => {
     const stored = localStorage.getItem(CACHE_KEY);
@@ -102,29 +54,33 @@ function Popular_random() {
     return Array.from(indexes);
   };
 
-  const initialRandomIndexes = cached ?? getUniqueRandomIndexes(arrPopular.length, 5);
-  const [randomIndexes, setRandomIndexes] = useState(initialRandomIndexes);
+  const [randomIndexes, setRandomIndexes] = useState(cached ?? []);
 
   useEffect(() => {
-    if (getCachedRandom() === null) {
+    if (data.length > 0 && (randomIndexes.length === 0 || !getCachedRandom())) {
+      const indexes = getUniqueRandomIndexes(data.length, 5);
+      setRandomIndexes(indexes);
       localStorage.setItem(
         CACHE_KEY,
-        JSON.stringify({ value: randomIndexes, expiresAt: Date.now() + CACHE_TTL })
+        JSON.stringify({ value: indexes, expiresAt: Date.now() + CACHE_TTL })
       );
     }
-  }, []);
+  }, [data]);
 
-  let popularProduct = arrPopular.filter(item => item.productViews > 400);
-  const hasPopularProducts = popularProduct.length > 0;
+  // Map the cached random indexes to actual product data
+  const popularProduct = randomIndexes.map(index => data[index]).filter(Boolean);
 
   return (
     <div className="feed-popular-cont swiper">
+        {loading && <div>Loading...</div>}
         <div className="feed-popular-wrap swiper-wrapper">
-          {hasPopularProducts && randomIndexes.map((itemIndex, index) => (
-            <div key={index} className="feed-popular-inner swiper-slide">
-              {feedPopular(popularProduct[itemIndex], index)}
+          {!loading && popularProduct.length > 0 && 
+            popularProduct.map((item, index) => (
+            <div key={item.id || index} className="feed-popular-inner swiper-slide">
+              {feedPopular(item, index)}
             </div>
-          ))}
+            ))
+          }
         </div>
       </div>
   )

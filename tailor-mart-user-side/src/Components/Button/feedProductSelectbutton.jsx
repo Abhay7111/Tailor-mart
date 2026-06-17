@@ -6,7 +6,7 @@ function feedProductSelectbutton() {
         {
             id:'1',
             buttonName:'All',
-            buttonTag:'/feed/all',
+            buttonTag:'all',
             buttonIcons:<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Check-Square--Streamline-Ultimate">
                         <desc>
                             Check Square Streamline Icon: https://streamlinehq.com
@@ -18,7 +18,7 @@ function feedProductSelectbutton() {
         {
             id:'2',
             buttonName:'T-shirt',
-            buttonTag:'men-T-shirt',
+            buttonTag:'men-t-shirt',
             buttonIcons:<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Shirt--Streamline-Sharp"><desc>{"\n    Shirt Streamline Icon: https://streamlinehq.com\n  "}</desc><g id="shirt--clothing-t-shirt-men-top-shopping-fashion"><path id="Vector 2716" d="M9 3v-0.5l-7 2L3 10h3v12l12 0V10h3l1 -5.5 -7 -2V3a3 3 0 0 1 -6 0Z" strokeWidth={1.5} /></g></svg>
         },
         {

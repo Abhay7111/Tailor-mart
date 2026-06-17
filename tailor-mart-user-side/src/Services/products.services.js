@@ -30,7 +30,8 @@ export const TEST_PRODUCT_DATA = [
         productName: "yellow cloth",
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
-        productPrice: "498",
+        productPrice: 498,
+        productViews: 554,
         productColor: 'yellow',
         productTag: {
             cloth: "smooth cloth"
@@ -43,6 +44,7 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "583",
+        productViews: 454,
         productColor:'Brown',
         productTag: {
             cloth: "men-t-shirt"
@@ -55,6 +57,19 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "2199",
+        productViews: 254,
+        productTag: {
+            cloth: "women-dress"
+        }
+    },
+    {
+        productImage: "https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+        productTitle: "A smooth texture (kahi) dress",
+        productName: "smooth kahi dress",
+        productLonchDate: "06/17/2026",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+        productPrice: "2199",
+        productViews: 254,
         productTag: {
             cloth: "women-dress"
         }
@@ -66,6 +81,7 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "978",
+        productViews: 654,
         productTag: {
             cloth: "smooth red cloth"
         }
@@ -77,6 +93,19 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "1599",
+        productViews: 674,
+        productTag: {
+            cloth: "smooth golden cloth"
+        }
+    },
+    {
+        productImage: "https://images.unsplash.com/photo-1571513800374-df1bbe650e56?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+        productTitle: "A smooth (Golden) texture",
+        productName: "smooth golden cloth",
+        productLonchDate: "06/17/2026",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+        productPrice: "1599",
+        productViews: 174,
         productTag: {
             cloth: "smooth golden cloth"
         }
@@ -88,6 +117,7 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "883",
+        productViews: 54,
         productTag: {
             cloth: "men-shirt"
         }
@@ -99,6 +129,7 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "533",
+        productViews: 464,
         productTag: {
             cloth: "men-t-shirt"
         }
@@ -110,6 +141,19 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "583",
+        productViews: 344,
+        productTag: {
+            cloth: "men-t-shirt"
+        }
+    },
+    {
+        productImage: "https://images.unsplash.com/photo-1608748010899-18f300247112?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+        productTitle: "A smooth (Red) smooth T-shirt",
+        productName: "smooth Red smooth T-shirt",
+        productLonchDate: "06/17/2026",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+        productPrice: "583",
+        productViews: 344,
         productTag: {
             cloth: "men-t-shirt"
         }
@@ -123,6 +167,18 @@ export const TEST_PRODUCT_DATA = [
         productPrice: "882",
         productTag: {
             cloth: "smooth kahi cloth"
+        }
+    },
+    {
+        productImage: "https://images.unsplash.com/photo-1612731486606-2614b4d74921?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+        productTitle: "A smooth (glossy white) texture",
+        productName: "smooth glossy white cloth",
+        productLonchDate: "06/17/2026",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+        productPrice: "2023",
+        productViews: 2023,
+        productTag: {
+            cloth: "smooth glossy white cloth"
         }
     },
     {
@@ -159,6 +215,17 @@ export const TEST_PRODUCT_DATA = [
         }
     },
     {
+        productImage: "https://plus.unsplash.com/premium_photo-1778901739863-7764fdca5848?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+        productTitle: "A culture saree",
+        productName: "A culture saree",
+        productLonchDate: "06/17/2026",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+        productPrice: "3899",
+        productTag: {
+            cloth: "women-saree"
+        }
+    },
+    {
         productImage: "https://images.unsplash.com/photo-1597897569252-9df44c7de0db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWFuJTIwY3VsdHVyZSUyMHNhcml8ZW58MHx8MHx8fDA%3D",
         productTitle: "A culture saree",
         productName: "A culture saree",
@@ -167,6 +234,18 @@ export const TEST_PRODUCT_DATA = [
         productPrice: "3899",
         productTag: {
             cloth: "women-saree"
+        }
+    },
+    {
+        productImage: "https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
+        productTitle: "Office based custom shirts",
+        productName: "Office based custom sweater",
+        productLonchDate: "06/17/2026",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+        productPrice: "683",
+        productViews: 428,
+        productTag: {
+            cloth: "sweater"
         }
     },
     {
@@ -189,6 +268,18 @@ export const TEST_PRODUCT_DATA = [
         productPrice: "583",
         productTag: {
             cloth: "men-t-shirt"
+        }
+    },
+    {
+        productImage: "https://plus.unsplash.com/premium_photo-1708110921381-5da0d7eb2e0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUzfHxmYXNoaW9ufGVufDB8fDB8fHww",
+        productTitle: "Saree",
+        productName: "Saree",
+        productLonchDate: "06/14/2026",
+        productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
+        productPrice: "1674",
+        productViews: 1674,
+        productTag: {
+            cloth: "sweater"
         }
     },
     {
