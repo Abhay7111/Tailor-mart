@@ -35,8 +35,14 @@
        object-fit: cover;
     border-radius: 5px;
   }
+  .allCloth-main .allCloth-cont-main .allCloth-cont LazyImage {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-details {
     width: 100%;
+    display: flex;
+    align-items: center;
   }
   .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-details h2 {
     width: 100%;
@@ -49,14 +55,14 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     line-height: 18px;
   }
   .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-details .allCloth-price {
     width: 100%;
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: start;
+    justify-content: start;
     gap: 5px;
     font-weight: 600;
   }

@@ -100,14 +100,14 @@ export const TEST_PRODUCT_DATA = [
     },
     {
         productImage: "https://images.unsplash.com/photo-1571513800374-df1bbe650e56?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
-        productTitle: "A smooth (Golden) texture",
-        productName: "smooth golden cloth",
+        productTitle: "Golden coart",
+        productName: "smooth golden coart",
         productLonchDate: "06/17/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "1599",
         productViews: 174,
         productTag: {
-            cloth: "smooth golden cloth"
+            cloth: "coart"
         }
     },
     {
@@ -272,8 +272,8 @@ export const TEST_PRODUCT_DATA = [
     },
     {
         productImage: "https://plus.unsplash.com/premium_photo-1708110921381-5da0d7eb2e0f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUzfHxmYXNoaW9ufGVufDB8fDB8fHww",
-        productTitle: "Saree",
-        productName: "Saree",
+        productTitle: "sweater",
+        productName: "sweater",
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: "1674",

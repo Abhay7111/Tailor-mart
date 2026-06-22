@@ -1,8 +1,10 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import Navbar from '../../Components/All-size-Navbar/Navbar';
 import { useProductData } from '../../Services/products.services';
 import './productDetails.css'
+
+
 function productDetails() {
 const {data, loading, error} = useProductData();
 const {id} = useParams();
@@ -33,6 +35,15 @@ const {id} = useParams();
                     </div>}
                 </div>
             ))}
+        </div>
+        <div className="productOrderOrAddToCart">
+            <div className="productAddToCart productButton">
+                <i className="ri-shopping-bag-4-line"></i>
+                <p>Add to cart</p>
+            </div>
+            <NavLink to={`/order/${id}`} className="productOrder productButton">
+                <p>Order</p>
+            </NavLink>
         </div>
     </div>
   )

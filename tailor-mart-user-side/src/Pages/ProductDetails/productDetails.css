@@ -2,6 +2,7 @@
   .productDetails-main {
     width: 100%;
     padding: 0 10px;
+    position: relative;
   }
   .productDetails-main .productDetails-wraper {
     width: 100%;
@@ -32,6 +33,8 @@
     width: fit-content;
     height: 100%;
     border-radius: 7px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-color-tag-info {
     width: 100%;
@@ -100,5 +103,37 @@
   }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-offers p::first-letter {
     text-transform: uppercase;
+  }
+  .productDetails-main .productOrderOrAddToCart {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  .productDetails-main .productOrderOrAddToCart .productButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    width: 40%;
+    background-color: #ececec;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: 400;
+  }
+  .productDetails-main .productOrderOrAddToCart .productButton:hover {
+    background-color: #e6e6e6;
+    border: 1px solid #dadada;
+    font-weight: 500;
   }
 }/*# sourceMappingURL=productDetails.css.map */

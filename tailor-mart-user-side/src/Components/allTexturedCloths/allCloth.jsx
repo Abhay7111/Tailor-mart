@@ -71,11 +71,11 @@ function AllCloth() {
                     <NavLink to={`/product/${items.productName}`} key={index} className='allCloth-cont'>
                         <LazyImage src={items.productImage} alt={items.productName} />
                         <div className='allCloth-details'>
+                            <h2>{items.productName}</h2>
                             <div className='allCloth-price'>
                                 <p>₹{Math.floor(items.productPrice * 1.2)}</p>
                                 <p>₹{items.productPrice}</p>
                             </div>
-                            <h2>{items.productName}</h2>
                         </div>
                     </NavLink>
                 ))}
