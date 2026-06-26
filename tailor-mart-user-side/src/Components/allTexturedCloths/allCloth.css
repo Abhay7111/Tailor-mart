@@ -1,5 +1,5 @@
 :root {
-  --DisplayNone: none;
+  --DisplayNone: block;
 }
 
 @media (max-width: 535px) {
@@ -98,6 +98,10 @@
   }
   .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-bookmark-wraper {
     display: var(--DisplayNone);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 30;
   }
   .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-bookmark-wraper .allCloth-Bookmark {
     width: 30px;
@@ -105,12 +109,13 @@
     background-color: rgba(240, 240, 240, 0.705);
     backdrop-filter: blur(2px);
     border-radius: 5px;
-    position: absolute;
-    top: 8px;
-    right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid rgb(182, 182, 182);
+    transition: all ease 0.3s;
+  }
+  .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-bookmark-wraper .allCloth-Bookmark:hover {
+    scale: 1.05;
   }
 }/*# sourceMappingURL=allCloth.css.map */

@@ -51,11 +51,27 @@ function AllCloth() {
     const { data, loading, error } = useProductData();
     const { id } = useParams();
     const categoryId = String(id || 'all').toLowerCase();
+    const [save, setSave] = useState(false);
 
     const filteredProducts = data.filter((item) => {
         const productCategory = String(item?.productTag?.cloth || '').toLowerCase();
         return categoryId === 'all' || productCategory === categoryId;
     });
+    const [savedProducts, setSavedProducts] = useState(() => new Set());
+
+    const toggleSave = (event, productName) => {
+        event.preventDefault();
+        event.stopPropagation();
+        setSavedProducts((current) => {
+            const next = new Set(current);
+            if (next.has(productName)) {
+                next.delete(productName);
+            } else {
+                next.add(productName);
+            }
+            return next;
+        });
+    };
 
     return (
         <div className='allCloth-main'>
@@ -67,24 +83,32 @@ function AllCloth() {
                     <div className='allCloth-empty'>No products found for “{id || 'all'}”.</div>
                 )}
 
-                {!loading && !error && filteredProducts.map((items, index) => (
-                    <NavLink to={`/product/${items.productName}`} key={index} className='allCloth-cont'>
-                        <div className="allCloth-bookmark-wraper">
-                            <div className='allCloth-Bookmark'><i className='ri-bookmark-line'></i></div>
-                        </div>
-                        <LazyImage src={items.productImage} alt={items.productName} />
-                        <div className='allCloth-details'>
-                            <h2>{items.productName}</h2>
-                            <div className='allCloth-price'>
-                                <div className="allCloth-price-wrap">
-                                    {items.productPriceOff && <p>₹{items.productPrice - (Math.floor(items.productPrice*items.productPriceOff/100))}</p>}
-                                    <p>₹{items.productPrice}</p>
+                {!loading && !error && filteredProducts.map((items, index) => {
+                    const isSaved = savedProducts.has(items.productName);
+                    return (
+                        <NavLink to={`/product/${items.productName}`} key={items.productName || index} className='allCloth-cont'>
+                            <div
+                                className="allCloth-bookmark-wraper"
+                                onClick={(event) => toggleSave(event, items.productName)}
+                            >
+                                <div className='allCloth-Bookmark'>
+                                    {isSaved ? <i className='ri-bookmark-fill'></i> : <i className='ri-bookmark-line'></i>}
                                 </div>
-                                { items.productPriceOff > 0 && <div className="productDiscount">-{items.productPriceOff}%</div> }
                             </div>
-                        </div>
-                    </NavLink>
-                ))}
+                            <LazyImage src={items.productImage} alt={items.productName} />
+                            <div className='allCloth-details'>
+                                <h2>{items.productName}</h2>
+                                <div className='allCloth-price'>
+                                    <div className="allCloth-price-wrap">
+                                        {items.productPriceOff && <p>₹{items.productPrice - (Math.floor(items.productPrice*items.productPriceOff/100))}</p>}
+                                        <p>₹{items.productPrice}</p>
+                                    </div>
+                                    { items.productPriceOff > 0 && <div className="productDiscount">-{items.productPriceOff}%</div> }
+                                </div>
+                            </div>
+                        </NavLink>
+                    );
+                })}
             </div>
         </div>
     );
