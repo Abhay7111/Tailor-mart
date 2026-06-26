@@ -2,7 +2,8 @@ import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Navbar from '../../Components/All-size-Navbar/Navbar';
 import { useProductData } from '../../Services/products.services';
-import './productDetails.css'
+import './productDetails.css';
+import price from '../../Components/prices/allClothPrice/price';
 
 
 function productDetails() {
@@ -27,8 +28,9 @@ const {id} = useParams();
                         <p className=''>{items.productDescription}</p>
                     </div>
                     <div className='productDetails-price-wraper'>
-                            <p className='productDetails-discount-price'>₹{Math.floor(items.productPrice*1.2)}</p>
-                            <p className='productDetails-price'>₹{items.productPrice}</p>
+                            <p className='productDetails-price'>₹{price(items)}</p>
+                            <p className='productDetails-discount-price'>₹{items.productPrice}</p>
+                            <p className='productPriceOff'>-{items.productPriceOff}%</p>
                     </div>
                     {items.productoffers && <div className='productDetails-offers'>
                         <p>offers</p>

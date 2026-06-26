@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useProductData } from '../../Services/products.services';
 import { NavLink, useParams } from 'react-router-dom';
-import './allCloth.css'
+import './allCloth.css';
+import price from '../prices/allClothPrice/price'
 
 const PLACEHOLDER_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
@@ -100,7 +101,7 @@ function AllCloth() {
                                 <h2>{items.productName}</h2>
                                 <div className='allCloth-price'>
                                     <div className="allCloth-price-wrap">
-                                        {items.productPriceOff && <p>₹{items.productPrice - (Math.floor(items.productPrice*items.productPriceOff/100))}</p>}
+                                        {items.productPriceOff && <p>₹{price(items)}</p>}
                                         <p>₹{items.productPrice}</p>
                                     </div>
                                     { items.productPriceOff > 0 && <div className="productDiscount">-{items.productPriceOff}%</div> }

@@ -91,7 +91,7 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: 978,
-        productPriceOff: '',
+        productPriceOff: '7',
         productViews: 654,
         productTag: {
             cloth: "smooth red cloth"

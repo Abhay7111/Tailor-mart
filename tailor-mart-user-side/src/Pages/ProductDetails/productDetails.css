@@ -90,6 +90,13 @@
     font-size: 1.2rem;
     font-weight: 600;
   }
+  .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-price-wraper .productPriceOff {
+    padding: 1px 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    color: white;
+    background-color: #111;
+  }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-offers {
     width: 100%;
     height: 200px;

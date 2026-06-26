@@ -1,5 +1,5 @@
 :root{
-    --DisplayNone: block;
+    --DisplayNone: none;
 }
 
 @media (max-width: 535px) {
@@ -122,6 +122,10 @@
 
                         &:hover{
                             scale: 1.05;
+                        }
+
+                        .ri-bookmark-fill{
+                            color: red;
                         }
                     }
                 }

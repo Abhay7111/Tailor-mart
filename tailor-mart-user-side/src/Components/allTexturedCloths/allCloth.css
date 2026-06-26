@@ -1,5 +1,5 @@
 :root {
-  --DisplayNone: block;
+  --DisplayNone: none;
 }
 
 @media (max-width: 535px) {
@@ -117,5 +117,8 @@
   }
   .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-bookmark-wraper .allCloth-Bookmark:hover {
     scale: 1.05;
+  }
+  .allCloth-main .allCloth-cont-main .allCloth-cont .allCloth-bookmark-wraper .allCloth-Bookmark .ri-bookmark-fill {
+    color: red;
   }
 }/*# sourceMappingURL=allCloth.css.map */
