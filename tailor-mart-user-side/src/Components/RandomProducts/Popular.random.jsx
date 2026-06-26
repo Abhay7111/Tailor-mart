@@ -29,7 +29,7 @@ function Popular_random() {
       </NavLink>
   )
   const CACHE_KEY = 'random';
-  const CACHE_TTL = 5000; // 5 seconds in milliseconds
+  const CACHE_TTL = 50000; // 50 seconds in milliseconds
 
   const getCachedRandom = () => {
     const stored = localStorage.getItem(CACHE_KEY);

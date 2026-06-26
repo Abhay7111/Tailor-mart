@@ -39,7 +39,7 @@ const {id} = useParams();
         <div className="productOrderOrAddToCart">
             <div className="productAddToCart productButton">
                 <i className="ri-shopping-bag-4-line"></i>
-                <p>Add to cart</p>
+                <p className='addToCartText'>Add to cart</p>
             </div>
             <NavLink to={`/order/${id}`} className="productOrder productButton">
                 <p>Order</p>

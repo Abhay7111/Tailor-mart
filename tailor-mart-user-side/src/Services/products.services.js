@@ -31,6 +31,7 @@ export const TEST_PRODUCT_DATA = [
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
         productPrice: 498,
+        productPriceOff: 9,
         productViews: 554,
         productColor: 'yellow',
         productTag: {
@@ -39,13 +40,20 @@ export const TEST_PRODUCT_DATA = [
     },
     {
         productImage: "https://plus.unsplash.com/premium_photo-1671656349296-9355f2d91565?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fG1lbi1ULXNoaXJ0fGVufDB8fDB8fHww",
+        productMoreImage:[
+            {
+                image:'',
+            },
+        ],
         productTitle: "A smooth (Brown) texture tshirts",
         productName: "smooth Brown cloth",
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
-        productPrice: "583",
-        productViews: 454,
+        productViews: 402,
         productColor:'Brown',
+        productPrice: 583,
+        productPriceOff:15,
+        productoffers:"50%",
         productTag: {
             cloth: "men-t-shirt"
         }
@@ -56,7 +64,8 @@ export const TEST_PRODUCT_DATA = [
         productName: "smooth kahi dress",
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
-        productPrice: "2199",
+        productPrice: 2199,
+        productPriceOff: 18,
         productViews: 254,
         productTag: {
             cloth: "women-dress"
@@ -65,10 +74,11 @@ export const TEST_PRODUCT_DATA = [
     {
         productImage: "https://plus.unsplash.com/premium_photo-1675186049366-64a655f8f537?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
         productTitle: "A smooth texture (kahi) dress",
-        productName: "smooth kahi dress",
+        productName: "smooth red top",
         productLonchDate: "06/17/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
-        productPrice: "2199",
+        productPrice: 2499,
+        productPriceOff: 22,
         productViews: 254,
         productTag: {
             cloth: "women-dress"
@@ -80,7 +90,8 @@ export const TEST_PRODUCT_DATA = [
         productName: "smooth red cloth",
         productLonchDate: "06/14/2026",
         productDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
-        productPrice: "978",
+        productPrice: 978,
+        productPriceOff: '',
         productViews: 654,
         productTag: {
             cloth: "smooth red cloth"

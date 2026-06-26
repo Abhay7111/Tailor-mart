@@ -69,12 +69,18 @@ function AllCloth() {
 
                 {!loading && !error && filteredProducts.map((items, index) => (
                     <NavLink to={`/product/${items.productName}`} key={index} className='allCloth-cont'>
+                        <div className="allCloth-bookmark-wraper">
+                            <div className='allCloth-Bookmark'><i className='ri-bookmark-line'></i></div>
+                        </div>
                         <LazyImage src={items.productImage} alt={items.productName} />
                         <div className='allCloth-details'>
                             <h2>{items.productName}</h2>
                             <div className='allCloth-price'>
-                                <p>₹{Math.floor(items.productPrice * 1.2)}</p>
-                                <p>₹{items.productPrice}</p>
+                                <div className="allCloth-price-wrap">
+                                    {items.productPriceOff && <p>₹{items.productPrice - (Math.floor(items.productPrice*items.productPriceOff/100))}</p>}
+                                    <p>₹{items.productPrice}</p>
+                                </div>
+                                { items.productPriceOff > 0 && <div className="productDiscount">-{items.productPriceOff}%</div> }
                             </div>
                         </div>
                     </NavLink>

@@ -1,3 +1,7 @@
+:root{
+    --DisplayNone: none;
+}
+
 @media (max-width: 535px) {
     .allCloth-main{
         width: 100%;
@@ -21,11 +25,13 @@
                 flex-direction: column;
                 align-items: start;
                 justify-content: space-between;
+                position: relative;
 
                 &:hover{
                     background-color: rgba(236, 236, 236, 0.918);
-                    scale: 1.01;
-                    border: 1px solid rgba(202, 202, 202, 0.911);
+                    scale: 1.005;
+                    border: 1px solid rgba(202, 202, 202, 0.397);
+                    --DisplayNone: block;
                 }
 
                 img{
@@ -42,37 +48,75 @@
                 .allCloth-details{
                     width: 100%;
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
+                    gap: 5px;
 
                     h2{
                         width: 100%;
                         text-align: start;
-                        margin-top: 2px;
+                        margin-top: 6px;
                         height: fit-content;
                         font-size: 0.9rem;
-                        font-weight: 500;
+                        font-weight: 400;
                         overflow: hidden;
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
+                        -webkit-line-clamp: 2;
                         line-height: 18px;
                     }
 
                     .allCloth-price{
                         width: 100%;
                         display: flex;
+                        flex-direction: row;
                         align-items: start;
-                        justify-content: start;
+                        justify-content: space-between;
                         gap: 5px;
                         font-weight: 600;
 
-                        p:nth-child(1){
-                            font-size: 0.8rem;
-                            font-weight: 400;
-                            text-decoration-line: line-through;
-                            opacity: 50%;
-                            margin: 5px 0;
+                        .allCloth-price-wrap{
+                            display: flex;
+                            align-items: start;
+                            justify-content: start;
+                            gap: 5px;
+
+                            p:nth-child(2){
+                                font-size: 0.8rem;
+                                font-weight: 400;
+                                text-decoration-line: line-through;
+                                opacity: 50%;
+                                margin: 5px 0;
+                            }
                         }
+
+                        .productDiscount{
+                            padding: 1px 5px;
+                            border-radius: 5px;
+                            background-color: black;
+                            color: white;
+                            font-weight: 400;
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+
+                .allCloth-bookmark-wraper{
+                    display: var(--DisplayNone);
+                    
+                    .allCloth-Bookmark{
+                        width: 30px;
+                        height: 30px;
+                        background-color: rgba(240, 240, 240, 0.705);
+                        backdrop-filter: blur(2px);
+                        border-radius: 5px;
+                        position: absolute;
+                        top: 8px;
+                        right: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid rgb(182, 182, 182);
                     }
                 }
             }
