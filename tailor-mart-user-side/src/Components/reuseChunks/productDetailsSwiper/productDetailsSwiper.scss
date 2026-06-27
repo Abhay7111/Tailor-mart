@@ -1,0 +1,43 @@
+.product-details-swiper-container {
+    width: 100%;
+    height: 450px;
+    max-width: 672px; // Tailwind के max-w-2xl के बराबर
+    margin: 0 auto;
+
+    .product-swiper {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #f3f4f6; // Light gray background
+    }
+
+    .product-swiper-slide {
+        width: 100% !important; // slidesPerView: 'auto' के लिए ज़रूरी
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-swiper-image {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+// स्टेट्स (States) के लिए सामान्य स्टाइल्स
+.swiper-loading, .swiper-no-data {
+    text-align: center;
+    padding: 40px 0;
+    color: #6b7280;
+}
+
+.swiper-error {
+    text-align: center;
+    padding: 40px 0;
+    color: #ef4444;
+}

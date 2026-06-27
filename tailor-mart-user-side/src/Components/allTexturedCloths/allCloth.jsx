@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useProductData } from '../../Services/products.services';
 import { NavLink, useParams } from 'react-router-dom';
 import './allCloth.css';
-import price from '../prices/allClothPrice/price'
+import price from '../prices/allClothPrice/price';
 
 const PLACEHOLDER_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
@@ -52,12 +52,31 @@ function AllCloth() {
     const { data, loading, error } = useProductData();
     const { id } = useParams();
     const categoryId = String(id || 'all').toLowerCase();
-    const [save, setSave] = useState(false);
 
-    const filteredProducts = data.filter((item) => {
-        const productCategory = String(item?.productTag?.cloth || '').toLowerCase();
-        return categoryId === 'all' || productCategory === categoryId;
-    });
+    const filteredProducts = useMemo(() => {
+        const seen = new Set();
+
+        return data.reduce((acc, item, index) => {
+            const productCategory = String(item?.productTag?.cloth || '').toLowerCase();
+            const productTestCategory = String(item?.productTag?.test || '').toLowerCase();
+            const productCeasonCategory = String(item?.productTag?.season || '').toLowerCase();
+            const matchesCategory = categoryId === 'all' || productCategory === categoryId || productTestCategory === categoryId || productCeasonCategory === categoryId;
+
+            if (!matchesCategory) return acc;
+
+            const identity = `${String(item?.productName || '').trim().toLowerCase()}::${String(item?.productImage || '').trim()}::${String(item?.productPrice ?? '')}`;
+            if (seen.has(identity)) return acc;
+
+            seen.add(identity);
+            acc.push({
+                ...item,
+                __productKey: `${String(item?.productName || '').trim().toLowerCase()}-${index}`,
+            });
+
+            return acc;
+        }, []);
+    }, [categoryId, data]);
+
     const [savedProducts, setSavedProducts] = useState(() => new Set());
 
     const toggleSave = (event, productName) => {
@@ -87,7 +106,7 @@ function AllCloth() {
                 {!loading && !error && filteredProducts.map((items, index) => {
                     const isSaved = savedProducts.has(items.productName);
                     return (
-                        <NavLink to={`/product/${items.productName}`} key={items.productName || index} className='allCloth-cont'>
+                        <NavLink to={`/product/${items.productName}`} key={items.__productKey || items.productName || index} className='allCloth-cont'>
                             <div
                                 className="allCloth-bookmark-wraper"
                                 onClick={(event) => toggleSave(event, items.productName)}

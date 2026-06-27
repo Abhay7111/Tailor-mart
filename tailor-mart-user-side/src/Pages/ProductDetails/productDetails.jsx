@@ -4,6 +4,12 @@ import Navbar from '../../Components/All-size-Navbar/Navbar';
 import { useProductData } from '../../Services/products.services';
 import './productDetails.css';
 import price from '../../Components/prices/allClothPrice/price';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import ProductDetailsSwiper from '../../Components/reuseChunks/productDetailsSwiper/productDetailsSwiper';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 function productDetails() {
@@ -18,7 +24,9 @@ const {id} = useParams();
             {!loading && !error && data.filter(item => item.productName === id).map((items, index) => (
                 <div key={index} className='productDetails-cont'>
                     <div className='productDetails-image-wraper'>
-                        <img src={items.productImage} alt={items.productName}/>
+                        <div className="w-full">
+                            <ProductDetailsSwiper />
+                        </div>
                     </div>
                     {items.productColor &&<div className='productDetails-color-tag-info'>
                         <p><span>Selected Color:</span> {items.productColor}</p>
@@ -46,6 +54,9 @@ const {id} = useParams();
             <NavLink to={`/order/${id}`} className="productOrder productButton">
                 <p>Order</p>
             </NavLink>
+        </div>
+        <div>
+            {/* <ProductDetailsSwiper/> */}
         </div>
     </div>
   )

@@ -1,7 +1,10 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import './feedProductSelectbutton.css';
 
 function feedProductSelectbutton() {
+    const {id} = useParams();
+
+    const matchesCategoryButton = id === 'all' || id === 'men-t-shirt' || id === 'women-dress' || id === 'men-shirt';
     let feedProductSelectButtonArr = [
         {
             id:'1',
@@ -44,7 +47,7 @@ function feedProductSelectbutton() {
     ]
   return (
     <div className={`feed-product-selectbutton`}>
-      {feedProductSelectButtonArr.map((buttons) => (
+      {matchesCategoryButton && feedProductSelectButtonArr.map((buttons) => (
         <NavLink to={`${buttons.buttonTag}`} className={({isActive}) => isActive ? `feed-product-buttons active` : `feed-product-buttons deactive`}>
             <i>{buttons.buttonIcons}</i>
             <p>{buttons.buttonName}</p>
