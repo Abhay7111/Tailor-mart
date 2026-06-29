@@ -26,6 +26,7 @@
     background-color: #eee;
     padding: 3px;
     border-radius: 10px;
+    position: relative;
   }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-image-wraper img {
     width: -moz-fit-content;
@@ -34,13 +35,26 @@
     border-radius: 7px;
     -o-object-fit: cover;
        object-fit: cover;
+    pointer-events: none;
+  }
+  .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-image-wraper .productLikeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 99;
+    font-size: 1.4rem;
+    color: #a1a1a1;
+    cursor: pointer;
+  }
+  .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-image-wraper .ri-heart-fill {
+    color: rgba(241, 38, 106, 0.815);
   }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-color-tag-info {
     width: 100%;
     height: 20px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     gap: 5px;
     opacity: 70%;
   }
@@ -61,6 +75,7 @@
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-title-wraper h2 {
     font-size: 1rem;
     font-weight: 600;
+    opacity: 95%;
   }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-title-wraper h2::first-letter {
     text-transform: uppercase;
@@ -73,6 +88,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
+    opacity: 70%;
   }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-price-wraper {
     display: flex;
@@ -109,6 +125,12 @@
   }
   .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-offers p::first-letter {
     text-transform: uppercase;
+  }
+  .productDetails-main .productDetails-wraper .productDetails-cont .productDetails-wraper {
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    border-radius: 10px;
   }
   .productDetails-main .productOrderOrAddToCart {
     width: 100%;
