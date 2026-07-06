@@ -1,10 +1,31 @@
 @import "tailwindcss";
+@font-face {
+    font-family: Aeonik;
+    font-weight: 500;
+    src: url(../public/Fonts/AeonikTRIAL-Regular.otf);
+}
+@font-face {
+    font-family: Aeonik;
+    font-weight: 200;
+    src: url(../public/Fonts/AeonikTRIAL-Light.otf);
+}
+@font-face {
+    font-family: Aeonik;
+    font-weight: 700;
+    src: url(../public/Fonts/AeonikTRIAL-Bold.otf);
+}
+
+:root{
+    --mainFont: Aeonik;
+    --secFont: 'poppins', 'san-serif';
+}
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--secFont);
+    font-weight: 500;
 }
 
 html, body{

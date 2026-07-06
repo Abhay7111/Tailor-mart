@@ -30,7 +30,7 @@
   }
   .allCloth-main .allCloth-cont-main .allCloth-cont:hover {
     background-color: rgba(236, 236, 236, 0.918);
-    scale: 1.005;
+    scale: 1.003;
     border: 1px solid rgba(202, 202, 202, 0.397);
     --DisplayNone: block;
   }
