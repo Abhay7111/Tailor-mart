@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useProductData } from '../../../Services/products.services';
 import './productSize.css'
@@ -6,19 +6,34 @@ import './productSize.css'
 function productSize() {
     const {id} = useParams();
     const {data, loading, error} = useProductData();
+    const [selectedSize, setSelectedSize] = useState('');
 
     const product = data?.find(item => item.productName === id);
-  return (
-    <div className='productSizeWraper'>
-        <div className="productSize">
-            {product?.productSize?.some(obj => "S" in obj)? <div className='size-available'>S</div> : <div className='size-not-available'>S</div>}
-            {product?.productSize?.some(obj => "M" in obj)? <div className='size-available'>M</div> : <div className='size-not-available'>M</div>}
-            {product?.productSize?.some(obj => "L" in obj)? <div className='size-available'>L</div> : <div className='size-not-available'>L</div>}
-            {product?.productSize?.some(obj => "XL" in obj)? <div className='size-available'>XL</div> : <div className='size-not-available'>XL</div>}
-            {product?.productSize?.some(obj => "XXL" in obj)? <div className='size-available'>XXL</div> : <div className='size-not-available'>XXL</div>}
+    const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
+    const isSizeAvailable = (size) => product?.productSize?.some(obj => size in obj);
+
+    return (
+        <div className='productSizeWraper'>
+            <div className="productSize">
+                {sizes.map((size) => {
+                    const available = isSizeAvailable(size);
+                    const classes = available
+                        ? `size-available${selectedSize === size ? ' size-selected' : ''}`
+                        : 'size-not-available';
+
+                    return (
+                        <div
+                            key={size}
+                            className={classes}
+                            onClick={() => available && setSelectedSize(size)}
+                        >
+                            {size}
+                        </div>
+                    );
+                })}
+            </div>
         </div>
-    </div>
-  )
+    );
 }
 
 export default productSize
