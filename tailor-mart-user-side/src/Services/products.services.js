@@ -37,7 +37,7 @@ export const TEST_PRODUCT_DATA = [
     productBrand: 'Nitin tyagi, jiminapur',
     productStocks: 45,
     productSize: [{M:"M"}, {L:"L"}, {XL:"XL"}],
-    productTag: { cloth: "smooth cloth" },
+    productTag: {gender: "women", cloth: "smooth cloth", season: "summer" },
     productMoreImage: {
       _0: "https://plus.unsplash.com/premium_photo-1772492086300-83aaaa09eda9?q=80&w=626&auto=format&fit=crop",
       _1: "https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?w=500&auto=format&fit=crop&q=60",
@@ -57,8 +57,8 @@ export const TEST_PRODUCT_DATA = [
     productoffers: "50%",
     productBrand: 'Ramnaresh, ramgadh',
     productStocks: 120,
-    productSize: [{S:"S"}, {M:"M"}, {L:"L"}, {XL:"XL"}, {XXL:"XXL"}],
-    productTag: { cloth: "men-t-shirt", test: "test" },
+    productSize: [{S:"S"}, {L:"L"}, {XL:"XL"}, {XXL:"XXL"}],
+    productTag: {gender: "men", cloth: "t-shirt", season: "summer" },
     productMoreImage: {
       _0: "https://plus.unsplash.com/premium_photo-1671656349296-9355f2d91565?w=500&auto=format&fit=crop&q=60",
       _1: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&auto=format&fit=crop&q=60",
@@ -77,7 +77,7 @@ export const TEST_PRODUCT_DATA = [
     productBrand: 'bhuvaneshwar tailor, jamilpur',
     productStocks: 15,
     productSize: [{S:"S"}, {M:"M"}, {L:"L"}],
-    productTag: { cloth: "women-dress" },
+    productTag: {gender: "women", cloth: "dress", season: "summer" },
     productMoreImage: {
       _0: "https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?w=500&auto=format&fit=crop&q=60",
       _1: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&auto=format&fit=crop&q=60",
@@ -96,7 +96,7 @@ export const TEST_PRODUCT_DATA = [
     productBrand: 'soni jaiswal, gorakhpur',
     productStocks: 30,
     productSize: [{M:"M"}, {L:"L"}, {XL:"XL"}],
-    productTag: { cloth: "women-dress" },
+    productTag: {gender: "women", cloth: "dress", season: "winter" },
     productMoreImage: {
       _0: "https//images.unsplash.com/photo-1503342394128-c104d54dba01?w=500&auto=format&fit=crop&q=60",
       _1: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500&auto=format&fit=crop&q=60",
@@ -115,7 +115,7 @@ export const TEST_PRODUCT_DATA = [
     productBrand: '',
     productStocks: 62,
     productSize: [{M:"M"}, {L:"L"}, {XL:"XL"}, {XXL:"XXL"}],
-    productTag: { cloth: "smooth red cloth" },
+    productTag: {gender: "women", cloth: "smooth red cloth", season: "summer" },
     productMoreImage: {
       _0: "https//images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500&auto=format&fit=crop&q=60",
       _1: "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=500&auto=format&fit=crop&q=60",
@@ -134,7 +134,7 @@ export const TEST_PRODUCT_DATA = [
     productBrand: '',
     productStocks: 25,
     productSize: [{L:"L"}, {XL:"XL"}, {XXL:"XXL"}],
-    productTag: { cloth: "coat" },
+    productTag: {gender: "women", cloth: "coat", season: "winter" },
     productMoreImage: {
       _0: "https//images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&auto=format&fit=crop&q=60",
       _1: "https://images.unsplash.com/photo-1544441893-675973e31985?w=500&auto=format&fit=crop&q=60",
@@ -153,7 +153,7 @@ export const TEST_PRODUCT_DATA = [
     productBrand: '',
     productStocks: 75,
     productSize: [{S:"S"}, {M:"M"}, {L:"L"}, {XXL:"XXL"}],
-    productTag: { cloth: "men-shirt" },
+    productTag: {gender: "men", cloth: "shirt", season: "summer" },
     productMoreImage: {
       _0: "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?q=80&w=765&auto=format&fit=crop",
       _1: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&auto=format&fit=crop&q=60",
@@ -172,7 +172,7 @@ export const TEST_PRODUCT_DATA = [
     productBrand: '',
     productStocks: 38,
     productSize: [{M:"M"}, {L:"L"}, {XL:"XL"}],
-    productTag: { cloth: "jeans" },
+    productTag: {gender: "women", cloth: "jeans", season: "summer" },
     productMoreImage: {
       _0: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&auto=format&fit=crop&q=60",
       _1: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=500&auto=format&fit=crop&q=60",

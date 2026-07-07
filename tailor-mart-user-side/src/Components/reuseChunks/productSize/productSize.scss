@@ -10,7 +10,7 @@
     justify-content: start;
     gap: 5px;
     padding: 0 5px;
-
+    
     div {
       min-width: 40px;
       height: 40px;
@@ -21,10 +21,11 @@
       align-items: center;
       justify-content: center;
       padding: 0 10px;
-      pointer-events: none;
+      cursor: pointer;
     }
     .size-not-available {
       opacity: 30%;
+      pointer-events: none;
     }
   }
 }

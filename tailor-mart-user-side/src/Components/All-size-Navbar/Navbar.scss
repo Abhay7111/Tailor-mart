@@ -4,26 +4,33 @@
     padding: 0 10px;
 }
 
-
+:root{
+    --imgBlur: 1px;
+}
 
 @media (max-width: 535px) {
     .button{
-            width: 100%;
-            background-color: rgb(87, 87, 87);
-            border-radius: 15px;
-            padding: 0px;
-            position: relative;
-            cursor: pointer;
-            opacity: 70%;
-            transition: all linear 0.2s;
-            filter: blur(0.03em);
+        width: 100%;
+        background-color: rgb(87, 87, 87);
+        border-radius: 15px;
+        padding: 0px;
+        position: relative;
+        cursor: pointer;
+        opacity: 85%;
+        transition: all linear 0.2s;
             
-            &:hover{
-                background-color: rgb(88, 88, 88);
-                opacity: 90%;
-                filter: blur(0px);
-                padding: 2px;
-            }
+        &:hover{
+            background-color: rgb(88, 88, 88);
+            opacity: 90%;
+            filter: blur(0px);
+            padding: 2px;
+            --imgBlur: 0px;
+        }
+    }
+
+    .text-mt{
+        margin: 15px 10px;
+        opacity: 85%;
     }
     .all-size-navbar-main{
         display:flex;
@@ -76,6 +83,7 @@
                 padding: 0 10px;
 
                 .button{
+                    overflow: hidden;
 
                     img{
                         width: 100%;
@@ -83,27 +91,30 @@
                         object-fit: cover;
                         border-radius: 13px;
                         pointer-events: none;
+                        filter: blur(var(--imgBlur));
+                    }
+
+                    .bottom-right{
+                        right: 5%;
+                        bottom: 3%;
                     }
                     
                     .button-text{
                         position: absolute;
-                        bottom: 3%;
-                        right: 5%;
                         color: #FBEFEF;
-                        font-size: 0.9rem;
+                        font-size: 0.85rem;
                         text-shadow: 0 0 4px rgb(0, 0, 0);
                     }
                 }
-            }
 
-            .seasonal-product-buttons{
-                width: 100%;
-                height: fit-content;
-                position: relative;
-                top: 20px;
-                padding: 0 5px;
-
-
+                .season{
+                    .button-text{
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+                }
             }
         }
     }

@@ -60,7 +60,21 @@ function AllCloth() {
             const productCategory = String(item?.productTag?.cloth || '').toLowerCase();
             const productTestCategory = String(item?.productTag?.test || '').toLowerCase();
             const productCeasonCategory = String(item?.productTag?.season || '').toLowerCase();
-            const matchesCategory = categoryId === 'all' || productCategory === categoryId || productTestCategory === categoryId || productCeasonCategory === categoryId;
+            const gender = String(item?.productTag?.gender || '').toLowerCase();
+            const genderAndCloth = String((item?.productTag?.gender)+' '+(item?.productTag?.cloth)).toLowerCase();
+            const genderAndClothProduct = String((item?.productTag?.gender)+' '+'products').toLowerCase();
+            const season = String((item?.productTag?.season)).toLowerCase();
+            const seasonProduct = String((item?.productTag?.season)+' '+'products').toLowerCase();
+            
+            const matchesCategory = categoryId === 'all' || 
+            productCategory === categoryId || 
+            productTestCategory === categoryId || 
+            productCeasonCategory === categoryId || 
+            gender === categoryId || 
+            genderAndCloth === categoryId || 
+            genderAndClothProduct === categoryId ||
+            season === categoryId ||
+            seasonProduct === categoryId;
 
             if (!matchesCategory) return acc;
 

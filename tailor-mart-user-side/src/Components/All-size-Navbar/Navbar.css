@@ -4,6 +4,10 @@
   padding: 0 10px;
 }
 
+:root {
+  --imgBlur: 1px;
+}
+
 @media (max-width: 535px) {
   .button {
     width: 100%;
@@ -12,15 +16,19 @@
     padding: 0px;
     position: relative;
     cursor: pointer;
-    opacity: 70%;
+    opacity: 85%;
     transition: all linear 0.2s;
-    filter: blur(0.03em);
   }
   .button:hover {
     background-color: rgb(88, 88, 88);
     opacity: 90%;
     filter: blur(0px);
     padding: 2px;
+    --imgBlur: 0px;
+  }
+  .text-mt {
+    margin: 15px 10px;
+    opacity: 85%;
   }
   .all-size-navbar-main {
     display: flex;
@@ -67,6 +75,9 @@
     gap: 0.6rem;
     padding: 0 10px;
   }
+  .all-size-navbar-main .menu-pop .Product-Buttons .button {
+    overflow: hidden;
+  }
   .all-size-navbar-main .menu-pop .Product-Buttons .button img {
     width: 100%;
     height: 100%;
@@ -74,21 +85,22 @@
        object-fit: cover;
     border-radius: 13px;
     pointer-events: none;
+    filter: blur(var(--imgBlur));
+  }
+  .all-size-navbar-main .menu-pop .Product-Buttons .button .bottom-right {
+    right: 5%;
+    bottom: 3%;
   }
   .all-size-navbar-main .menu-pop .Product-Buttons .button .button-text {
     position: absolute;
-    bottom: 3%;
-    right: 5%;
     color: #FBEFEF;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-shadow: 0 0 4px rgb(0, 0, 0);
   }
-  .all-size-navbar-main .menu-pop .seasonal-product-buttons {
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    position: relative;
-    top: 20px;
-    padding: 0 5px;
+  .all-size-navbar-main .menu-pop .Product-Buttons .season .button-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 }/*# sourceMappingURL=Navbar.css.map */

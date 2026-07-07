@@ -21,8 +21,9 @@
   align-items: center;
   justify-content: center;
   padding: 0 10px;
-  pointer-events: none;
+  cursor: pointer;
 }
 .productSizeWraper .productSize .size-not-available {
   opacity: 30%;
+  pointer-events: none;
 }/*# sourceMappingURL=productSize.css.map */
