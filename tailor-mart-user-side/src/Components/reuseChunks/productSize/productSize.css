@@ -11,7 +11,7 @@
   gap: 5px;
   padding: 0 5px;
 }
-.productSizeWraper .productSize div {
+.productSizeWraper .productSize .size-btn {
   min-width: 30px;
   height: 30px;
   background-color: rgba(236, 236, 236, 0.5411764706);
@@ -26,7 +26,7 @@
   font-size: 0.8rem;
   transition: all linear 0.15s;
 }
-.productSizeWraper .productSize div:hover {
+.productSizeWraper .productSize .size-btn:hover {
   background-color: rgba(221, 221, 221, 0.6980392157);
   border: 1px solid #d8d7d7;
 }

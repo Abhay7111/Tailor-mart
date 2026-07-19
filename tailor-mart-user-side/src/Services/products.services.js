@@ -125,7 +125,7 @@ export const TEST_PRODUCT_DATA = [
   {
     productImage: "https://images.unsplash.com/photo-1571513800374-df1bbe650e56?w=400&auto=format&fit=crop&q=60",
     productTitle: "Golden coat",
-    productName: "smooth golden coat",
+    productName: "smooth golden suit",
     productLoanchDate: "06/17/2026",
     productDescrption: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi.",
     productPrice: 1599,
@@ -134,9 +134,9 @@ export const TEST_PRODUCT_DATA = [
     productBrand: '',
     productStocks: 25,
     productSize: [{L:"L"}, {XL:"XL"}, {XXL:"XXL"}],
-    productTag: {gender: "women", cloth: "coat", season: "winter" },
+    productTag: {gender: "women", cloth: "suit", season: "winter" },
     productMoreImage: {
-      _0: "https//images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&auto=format&fit=crop&q=60",
+      _0: "https://images.unsplash.com/photo-1571513800374-df1bbe650e56?w=400&auto=format&fit=crop&q=60",
       _1: "https://images.unsplash.com/photo-1544441893-675973e31985?w=500&auto=format&fit=crop&q=60",
       _2: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&auto=format&fit=crop&q=60"
     }
@@ -169,7 +169,8 @@ export const TEST_PRODUCT_DATA = [
     productPrice: 2299,
     productPriceOff: 30,
     productViews: 1432,
-    productBrand: '',
+    productColor: 'blue',
+    productBrand: 'Zara',
     productStocks: 38,
     productSize: [{M:"M"}, {L:"L"}, {XL:"XL"}],
     productTag: {gender: "women", cloth: "jeans", season: "summer" },

@@ -13,7 +13,7 @@ function App() {
             <Route index element="hello"/>
             {/* Feed page start from here */}
             <Route path='feed' element={<Feed />}>
-            {/* It is for showing all products over here */}
+              {/* It is for showing all products over here */}
               <Route path=':id' element={<AllCloth/>}/>
             </Route>
             <Route path="*" element={<div>404</div>} />
@@ -21,7 +21,9 @@ function App() {
           {/* product details starts here */}
           <Route path="product" >
             <Route index element={'sadasd'}/>
-            <Route path=":id" element={<ProductDetails/>}/>
+            <Route path=":id" element={<ProductDetails/>}> 
+              <Route path=':id' element={'<ProductDetails/>'} />
+            </Route>
           </Route>
 
           <Route path='order'>

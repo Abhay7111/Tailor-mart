@@ -3,6 +3,7 @@ import { useProductData } from '../../Services/products.services';
 import { NavLink, useParams } from 'react-router-dom';
 import './allCloth.css';
 import price from '../prices/allClothPrice/price';
+import FeedProductNotFound from '../Error/ProductDetailsNotFound/FeedProductNotFound';
 
 const PLACEHOLDER_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
@@ -114,7 +115,7 @@ function AllCloth() {
 
             <div className='allCloth-cont-main'>
                 {!loading && !error && filteredProducts.length === 0 && (
-                    <div className='allCloth-empty'>No products found for “{id || 'all'}”.</div>
+                    <div className='allCloth-empty'><FeedProductNotFound/></div>
                 )}
 
                 {!loading && !error && filteredProducts.map((items, index) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { useProductData } from '../../../Services/products.services';
 import './productSize.css'
 
@@ -22,13 +22,14 @@ function productSize() {
                         : 'size-not-available';
 
                     return (
-                        <div
+                        <NavLink
+                            to={`${size}`}
                             key={size}
-                            className={classes}
+                            className={`${classes} size-btn`}
                             onClick={() => available && setSelectedSize(size)}
                         >
                             {size}
-                        </div>
+                        </NavLink>
                     );
                 })}
             </div>
